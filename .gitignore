@@ -9,3 +9,8 @@ dist-ssr
 .merlin
 /lib/
 *.bs.js
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
