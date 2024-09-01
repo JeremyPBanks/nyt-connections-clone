@@ -9,16 +9,23 @@ module GameLoader = {
   }
 }
 
+module LoadValues = {
+    @react.component
+    let make = () => {
+    let navigate = ReactRouter.useNavigate()
+    Puzzle.sampleValues()->Puzzle.toConnections->Puzzle.Encode.slug->navigate(None)
+    }
+}
+
 open ReactRouter
 
 let router =
   <>
-    <Route path="/" element={<Create />} />
     <Route
-      path=":slug"
+      path="/"
       element={<GameLoader />}
       loader={({params}: loaderParams<{"slug": string}>) => {
-        let slug = params["slug"]
+        let slug = Puzzle.sampleValues()->Puzzle.toConnections->Puzzle.Encode.slug
         switch Puzzle.Decode.slug(slug) {
         | Ok(connections) => Data((connections, slug))
         | Error(e) => {
