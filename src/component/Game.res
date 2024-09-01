@@ -162,18 +162,16 @@ let make = (~connections: Puzzle.connections, ~slug: string) => {
   open FramerMotion
 
   <Form
-    title="Custom Connections"
+    title="V+J Connections!"
     className="max-w-lg"
     description={<>
       <p> {"Find four groups of four!"->React.string} </p>
       <p>
-        {"A custom "->React.string}
+        {"Based on the "->React.string}
         <a target="_blank" href="https://www.nytimes.com/games/connections">
-          {"Connections"->React.string}
+          {"NYT Connections"->React.string}
         </a>
-        {" puzzle. "->React.string}
-        <ReactRouter.Link href="/"> {"Build your own"->React.string} </ReactRouter.Link>
-        {"."->React.string}
+        {" puzzle Game"->React.string}
       </p>
     </>}
     buttons={switch gameState {
