@@ -171,7 +171,7 @@ let make = (~connections: Puzzle.connections, ~slug: string) => {
         <a target="_blank" href="https://www.nytimes.com/games/connections">
           {"NYT Connections"->React.string}
         </a>
-        {" puzzle Game"->React.string}
+        {" puzzle game"->React.string}
       </p>
     </>}
     buttons={switch gameState {
