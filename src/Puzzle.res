@@ -101,10 +101,10 @@ let remainingSolutions = (connections: connections, solved: array<solution>): ar
 
 let sampleValues = (): rows =>
   list{
-    ("Test One", ["One", "Two", "Three", "Four"]),
-    ("Test Two", ["Five", "Six", "Seven", "Eight"]),
-    ("Test Three", ["Nine", "Ten", "Eleven", "Twelve"]),
-    ("Test Four", ["Thirteen", "Fourtteen", "Fifteen", "Sixteen"]),
+    ("Forms of Transportation We've Taken Together", ["Fly", "Drive", "Cruise", "Train"]),
+    ("Countries We've Been To Together", ["US", "DE", "CAN", "ENG"]),
+    ("Our Forms of Communication When Remote", ["Playlist", "Text", "Letter", "Zoom"]),
+    ("MLB Teams We've Seen Together", ["PHI", "COL", "MIN", "WAS"]),
   }->List.mapWithIndex((i, (title, values)) => (RowId(i), {title, values}))
 
 module Decode = {
